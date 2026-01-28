@@ -1,2 +1,14 @@
-# SARS2_Challenge
-Reproducible workflows for analyzing metagenomic and RNA sequencing data from a SARS-CoV-2 human challenge study, including longitudinal host transcriptomic and microbiome analyses linked to clinical and virologic outcomes.
+# SARS-CoV-2 Challenge Study Multi-Omic Analysis
+
+Author: Matthew Kelly <a href="https://orcid.org/0000-0001-8819-2315" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon"></a>  
+Last update: 
+
+This repository contains the files and code necessary to replicate the analyses presented in the manuscript '_Upper respiratory microbiome and host response signatures are associated with infection susceptibility and symptoms in a human experimental SARS-CoV-2 challenge model_', which is available on medRxiv: ________. The overall objective of this manuscript was to characterize upper respiratory tract microbe-host interactions that influence susceptibility to SARS-CoV-2 infection and associated symptomatology.
+
+## Overview
+
+This repository contains the data files ([`Data_Files/`](Data_Files/)), scripts ([`Scripts/`](Scripts/)), and outputs ([`Outputs/`](Outputs/)) for the analyses presented in this manuscript. The raw RNA sequencing files are publicly available _____. The sequencing dataset is available in the ______ Sequence Read Archive ([PRJNA1160064](https://www.ncbi.nlm.nih.gov/sra/?term=PRJNA1160064)). 
+
+## File Description
+
+- [`Data_Files`](Data_Files/)/
