@@ -19,3 +19,20 @@ This repository contains the data files ([`Data_Files/`](Data_Files/)), scripts 
 
 
 - [`Output_Files`](Output_Files/)/ 
+Figure1.png: Figure 1; nasal immune module expression by infection status.
+Figure2.png: Figure 2; nasal microbiome composition by infection status.
+Figure3.png: Figure 3; nasal multi-omic associations by infection status.
+Figure4.png: Figure 4; nasal immune module expression by symptom burden.
+Figure5.png: Figure 5; nasal multi-omic associations by symptom burden.
+FigureS1.png: Supplementary Figure S1; symptom burden and viral load kinetics.
+FigureS2.png: Supplementary Figure S2; throat immune module expression by infection status.
+FigureS3.png: Supplementary Figure S3; nasal and throat microbiome diversity and bacterial burden.
+FigureS4.png: Supplementary Figure S4; throat microbiome composition by infection status.
+FigureS5.png: Supplementary Figure S5; throat multi-omic associations by infection status.
+FigureS6.png: Supplementary Figure S6; throat immune module expression by symptom burden.
+FigureS7.png: Supplementary Figure S7; immune module expression by viral load.
+FigureS8.png: Supplementary Figure S8; throat multi-omic associations by symptom burden.
+
+FigureS9.png: Supplementary Figure S9; nasal multi-omic associations by viral load.
+
+FigureS10.png: Supplementary Figure S10; throat multi-omic associations by viral load.
