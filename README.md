@@ -1,6 +1,7 @@
 # SARS-CoV-2 Challenge Study Multi-Omic Analysis
 
-Author: Matthew Kelly <a href="https://orcid.org/0000-0001-8819-2315" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon"></a>  
+**Authors:** Jillian H. Hurst¹,²,³,⁴,*, Visanu Wanchai⁵, Pixu Shi⁶, Intawat Nookaew⁵, Devjanee Swain-Lenz⁷, Laura-Leigh Rowlette⁷, Sarah Cleaton⁷, Jason Arnold⁴, So Young Kim⁴, Corbin Hite³, Kristine L. Kay⁸,⁹, Andrew Catchpole¹⁰, Mariya Kalinova¹⁰, Ben Killingley¹¹, Alex Mann¹⁰, Helen Wagstaffe¹², Christopher Chiu¹², Matthew S. Kelly⁸,⁹,*  
+*Corresponding authors*
 Last updated: 11/16/2026
 
 This repository contains the files and code necessary to replicate the analyses presented in the manuscript '_Upper respiratory microbiome and host immune signatures associated with SARS-CoV-2 susceptibility and illness in a human challenge model_', which is available on medRxiv (_______). The overall objective of this manuscript was to characterize upper respiratory tract microbe-host interactions that influence susceptibility to SARS-CoV-2 infection and associated symptomatology.
