@@ -1,4 +1,4 @@
-# Upper respiratory microbiome and host responses to SARS-CoV-2 Challenge
+# Upper respiratory microbiome and host responses to SARS-CoV-2 challenge
 
 **Authors:** Jillian H. Hurst, Visanu Wanchai, Pixu Shi, Intawat Nookaew, Devjanee Swain-Lenz, Laura-Leigh Rowlette, Sarah Cleaton, Jason Arnold, So Young Kim, Corbin Hite, Kristine L. Kay, Andrew Catchpole, Mariya Kalinova, Ben Killingley, Alex Mann, Helen Wagstaffe, Christopher Chiu, Matthew S. Kelly
 
