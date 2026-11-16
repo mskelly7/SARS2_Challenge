@@ -15,6 +15,7 @@ This repository contains the data files ([`Data_Files/`](Data_Files/)), scripts 
   - [`SARS2_challenge_metadata.xlsx`](Data_Files/SARS2_challenge_metadata.xlsx): study metadata containing participant characteristics, sample information, and clinical variables used in the analyses
   - [`SARS2_challenge_DD.xlsx`](Data_Files/SARS2_challenge_DD.xlsx): data dictionary describing study variables
   - [`SARS2_challenge_DNASeq_controls.xlsx`](Data_Files/SARS2_challenge_DNASeq_controls.xlsx): sequencing control information used during microbiome data preprocessing
+  - [`SARS2_challenge_RNASeq_controls.xlsx`](Data_Files/SARS2_challenge_RNASeq_controls.xlsx): sequencing control information used during RNA sequencing data preprocessing
   - [`SARS2_challenge_sx_vl.csv`](Data_Files/SARS2_challenge_sx_vl.csv): longitudinal clinical data containing symptom scores, viral load measurements, and participant group classifications
   - [`phy.mts.16s.pruned.rds`](Data_Files/phy.mts.16s.pruned.rds): phyloseq object containing processed nasal 16S rRNA gene sequencing data following contaminant removal and sample filtering
   - [`phy.mts.16s.pruned.species.rds`](Data_Files/phy.mts.16s.pruned.species.rds): phyloseq object containing species-level nasal microbiome abundances following taxonomic aggregation and filtering
