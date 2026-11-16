@@ -1,8 +1,9 @@
 # SARS-CoV-2 Challenge Study Multi-Omic Analysis
 
-**Authors:** Jillian H. Hurst¹,²,³,⁴,*, Visanu Wanchai⁵, Pixu Shi⁶, Intawat Nookaew⁵, Devjanee Swain-Lenz⁷, Laura-Leigh Rowlette⁷, Sarah Cleaton⁷, Jason Arnold⁴, So Young Kim⁴, Corbin Hite³, Kristine L. Kay⁸,⁹, Andrew Catchpole¹⁰, Mariya Kalinova¹⁰, Ben Killingley¹¹, Alex Mann¹⁰, Helen Wagstaffe¹², Christopher Chiu¹², Matthew S. Kelly⁸,⁹,*  
-*Corresponding authors*
-Last updated: 11/16/2026
+**Authors:** Jillian H. Hurst*, Visanu Wanchai, Pixu Shi, Intawat Nookaew, Devjanee Swain-Lenz, Laura-Leigh Rowlette, Sarah Cleaton, Jason Arnold, So Young Kim, Corbin Hite, Kristine L. Kay, Andrew Catchpole, Mariya Kalinova, Ben Killingley, Alex Mann, Helen Wagstaffe, Christopher Chiu, Matthew S. Kelly*
+
+**Corresponding authors:** Jillian H. Hurst ([email](mailto:jillian.hurst@duke.edu)) and Matthew S. Kelly ([email](mailto:mkelly3@uams.edu))  
+**Last updated:** November 16, 2026
 
 This repository contains the files and code necessary to replicate the analyses presented in the manuscript '_Upper respiratory microbiome and host immune signatures associated with SARS-CoV-2 susceptibility and illness in a human challenge model_', which is available on medRxiv (_______). The overall objective of this manuscript was to characterize upper respiratory tract microbe-host interactions that influence susceptibility to SARS-CoV-2 infection and associated symptomatology.
 
