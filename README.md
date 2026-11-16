@@ -43,6 +43,10 @@ This repository contains the data files ([`Data_Files/`](Data_Files/)), scripts 
   - [`Figure_S9_S10_100726.R`](Scripts/Figure_S9_S10_100726.R): Supplementary Figures S9 and S10; multi-omic associations between microbial species and host immune modules by viral load; inputs: [`phy.mts.16s.pruned.species.rds`](Data_Files/phy.mts.16s.pruned.species.rds), [`phy.throat.ngs.pruned.species.rds`](Data_Files/phy.throat.ngs.pruned.species.rds), [`ssgsea.rds`](Data_Files/ssgsea.rds), [`chaussabel_modules_17.rds`](Data_Files/chaussabel_modules_17.rds), and DIABLO viral-load model results; outputs: [`FigureS9.png`](Output_Files/FigureS9.png), [`FigureS10.png`](Output_Files/FigureS10.png).
 
 - [`Output_Files`](Output_Files/)/
+  - [`DIABLO`](Output_Files/DIABLO/)/
+  - [`infection`](Output_Files/DIABLO/infection/): fitted DIABLO models and model performance results for analyses of multi-omic associations by SARS-CoV-2 infection status; includes nasal (`mts`) and throat (`throat`) analyses
+  - [`symptoms`](Output_Files/DIABLO/symptoms/): fitted DIABLO models and model performance results for analyses of multi-omic associations by symptom burden among infected participants; includes nasal (`mts`) and throat (`throat`) analyses
+  - [`viral_load`](Output_Files/DIABLO/viral_load/): fitted DIABLO models and model performance results for analyses of multi-omic associations by SARS-CoV-2 viral load; includes nasal (`mts`) and throat (`throat`) analyses
   - [`Figure1.png`](Output_Files/Figure1.png): Figure 1; nasal immune module expression by infection status.
   - [`Figure2.png`](Output_Files/Figure2.png): Figure 2; nasal microbiome composition by infection status.
   - [`Figure3.png`](Output_Files/Figure3.png): Figure 3; nasal multi-omic associations by infection status.
