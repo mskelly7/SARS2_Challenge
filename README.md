@@ -1,6 +1,7 @@
 # SARS-CoV-2 Challenge Study Multi-Omic Analysis
 
 **Authors:** Jillian H. Hurst, Visanu Wanchai, Pixu Shi, Intawat Nookaew, Devjanee Swain-Lenz, Laura-Leigh Rowlette, Sarah Cleaton, Jason Arnold, So Young Kim, Corbin Hite, Kristine L. Kay, Andrew Catchpole, Mariya Kalinova, Ben Killingley, Alex Mann, Helen Wagstaffe, Christopher Chiu, Matthew S. Kelly
+
 **Corresponding authors:** Jillian H. Hurst ([email](mailto:jillian.hurst@duke.edu)) and Matthew S. Kelly ([email](mailto:mkelly3@uams.edu))  
 **Last updated:** November 16, 2026
 
