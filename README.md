@@ -1,38 +1,59 @@
 # SARS-CoV-2 Challenge Study Multi-Omic Analysis
 
 Author: Matthew Kelly <a href="https://orcid.org/0000-0001-8819-2315" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon"></a>  
-Last update: 
+Last updated: 11/16/2026
 
-This repository contains the files and code necessary to replicate the analyses presented in the manuscript '_Upper respiratory microbiome and host response signatures are associated with infection susceptibility and symptoms in a human experimental SARS-CoV-2 challenge model_', which is available on medRxiv: ________. The overall objective of this manuscript was to characterize upper respiratory tract microbe-host interactions that influence susceptibility to SARS-CoV-2 infection and associated symptomatology.
+This repository contains the files and code necessary to replicate the analyses presented in the manuscript '_Upper respiratory microbiome and host immune signatures associated with SARS-CoV-2 susceptibility and illness in a human challenge model_', which is available on medRxiv (_______). The overall objective of this manuscript was to characterize upper respiratory tract microbe-host interactions that influence susceptibility to SARS-CoV-2 infection and associated symptomatology.
 
 ## Overview
 
-This repository contains the data files ([`Data_Files/`](Data_Files/)), scripts ([`Scripts/`](Scripts/)), and outputs ([`Outputs/`](Outputs/)) for the analyses presented in this manuscript. The raw RNA sequencing files are publicly available _____. The sequencing dataset is available in the ______ Sequence Read Archive ([PRJNA1160064](https://www.ncbi.nlm.nih.gov/sra/?term=PRJNA1160064)). 
+This repository contains the data files ([`Data_Files/`](Data_Files/)), scripts ([`Scripts/`](Scripts/)), and outputs ([`Outputs/`](Outputs/)) for the analyses presented in this manuscript. The RNA sequencing dataset generated in this study is available in the European Genome-phenome Archive ([EGA, EGAS50000001440](https://ega-archive.org/studies/EGAS50000001440)). The shotgun metagenomic and 16S rRNA gene sequencing data used for analyses of the upper respiratory tract microbiome are available in the NCBI Sequence Read Archive ([SRA, PRJNA1160064](https://www.ncbi.nlm.nih.gov/sra/?term=PRJNA1160064)). De-identified metadata, intermediate files, output files, and scripts used for data analysis are available in this repository.
 
 ## File Description
 
 - [`Data_Files`](Data_Files/)/
-
-
+  - [`SARS2_challenge_metadata.xlsx`](Data_Files/SARS2_challenge_metadata.xlsx): study metadata containing participant characteristics, sample information, and clinical variables used in the analyses
+  - [`SARS2_challenge_DD.xlsx`](Data_Files/SARS2_challenge_DD.xlsx): data dictionary describing study variables
+  - [`SARS2_challenge_DNASeq_controls.xlsx`](Data_Files/SARS2_challenge_DNASeq_controls.xlsx): sequencing control information used during microbiome data preprocessing
+  - [`SARS2_challenge_sx_vl.csv`](Data_Files/SARS2_challenge_sx_vl.csv): longitudinal clinical data containing symptom scores, viral load measurements, and participant group classifications
+  - [`phy.mts.16s.pruned.rds`](Data_Files/phy.mts.16s.pruned.rds): phyloseq object containing processed nasal 16S rRNA gene sequencing data following contaminant removal and sample filtering
+  - [`phy.mts.16s.pruned.species.rds`](Data_Files/phy.mts.16s.pruned.species.rds): phyloseq object containing species-level nasal microbiome abundances following taxonomic aggregation and filtering
+  - [`phy.throat.ngs.pruned.rds`](Data_Files/phy.throat.ngs.pruned.rds): phyloseq object containing processed throat shotgun metagenomic sequencing data following contaminant removal and sample filtering
+  - [`phy.throat.ngs.pruned.species.rds`](Data_Files/phy.throat.ngs.pruned.species.rds): phyloseq object containing species-level throat microbiome abundances following taxonomic aggregation and filtering
+  - [`chaussabel_modules_17.rds`](Data_Files/chaussabel_modules_17.rds): curated gene sets defining the 17 Chaussabel immune modules used in downstream analyses
+  - [`chaussabel_modules_17.xlsx`](Data_Files/chaussabel_modules_17.xlsx): Excel file containing gene definitions for the 17 immune modules
+  - [`Chaussabel_Reactome_top10_by_module.csv`](Data_Files/Chaussabel_Reactome_top10_by_module.csv): Reactome pathway enrichment results for the curated immune modules
+  - [`Chaussabel_GO_BP_top10_by_module.csv`](Data_Files/Chaussabel_GO_BP_top10_by_module.csv): Gene Ontology biological process enrichment results for the curated immune modules
+  - [`ssgsea.rds`](Data_Files/ssgsea.rds): longitudinal Chaussabel immune module enrichment scores derived from host RNA-seq data, including scores scaled within each anatomical site
 
 - [`Scripts`](Scripts/)/
+  - [`DNASeq_Preprocessing_061526.R`](Scripts/DNASeq_Preprocessing_061526.R): preprocessing of nasal 16S rRNA gene sequencing and throat shotgun metagenomic sequencing data, including contaminant removal, taxonomic aggregation, filtering, and qPCR-based bacterial abundance scaling; inputs include [`SARS2_challenge_metadata.xlsx`](Data_Files/SARS2_challenge_metadata.xlsx) and [`SARS2_challenge_DNASeq_controls.xlsx`](Data_Files/SARS2_challenge_DNASeq_controls.xlsx); outputs include [`phy.mts.16s.pruned.rds`](Data_Files/phy.mts.16s.pruned.rds), [`phy.mts.16s.pruned.species.rds`](Data_Files/phy.mts.16s.pruned.species.rds), [`phy.throat.ngs.pruned.rds`](Data_Files/phy.throat.ngs.pruned.rds), and [`phy.throat.ngs.pruned.species.rds`](Data_Files/phy.throat.ngs.pruned.species.rds).
+  - [`RNASeq_Preprocessing_100626.R`](Scripts/RNASeq_Preprocessing_100626.R): preprocessing of nasal and throat host RNA-seq data, normalization of gene expression, calculation of immune module enrichment scores using ssGSEA, and functional annotation of immune modules; outputs include [`ssgsea.rds`](Data_Files/ssgsea.rds), [`chaussabel_modules_17.rds`](Data_Files/chaussabel_modules_17.rds), [`chaussabel_modules_17.xlsx`](Data_Files/chaussabel_modules_17.xlsx), [`Chaussabel_Reactome_top10_by_module.csv`](Data_Files/Chaussabel_Reactome_top10_by_module.csv), and [`Chaussabel_GO_BP_top10_by_module.csv`](Data_Files/Chaussabel_GO_BP_top10_by_module.csv).
+  - [`DIABLO_061526.R`](Scripts/DIABLO_061526.R): integrated multi-omic analysis of microbial species abundances and host immune module expression using DIABLO; inputs include [`phy.mts.16s.pruned.species.rds`](Data_Files/phy.mts.16s.pruned.species.rds), [`phy.throat.ngs.pruned.species.rds`](Data_Files/phy.throat.ngs.pruned.species.rds), and [`ssgsea.rds`](Data_Files/ssgsea.rds); outputs include fitted DIABLO models and performance results used in subsequent multi-omic figures.
+  - [`Figure_1_S2_100726.R`](Scripts/Figure_1_S2_100726.R): Figure 1 and Supplementary Figure S2; baseline and longitudinal immune module expression by infection status in nasal and throat samples; inputs: [`ssgsea.rds`](Data_Files/ssgsea.rds), [`chaussabel_modules_17.rds`](Data_Files/chaussabel_modules_17.rds); outputs: [`Figure1.png`](Output_Files/Figure1.png), [`FigureS2.png`](Output_Files/FigureS2.png).
+  - [`Figure_2_S4_100626.R`](Scripts/Figure_2_S4_100626.R): Figure 2 and Supplementary Figure S4; baseline and longitudinal nasal and throat microbiome composition by infection status; inputs: [`phy.mts.16s.pruned.species.rds`](Data_Files/phy.mts.16s.pruned.species.rds), [`phy.throat.ngs.pruned.species.rds`](Data_Files/phy.throat.ngs.pruned.species.rds); outputs: [`Figure2.png`](Output_Files/Figure2.png), [`FigureS4.png`](Output_Files/FigureS4.png).
+  - [`Figure_3_S5_100626.R`](Scripts/Figure_3_S5_100626.R): Figure 3 and Supplementary Figure S5; multi-omic associations between microbial species and host immune modules by infection status; inputs: [`phy.mts.16s.pruned.species.rds`](Data_Files/phy.mts.16s.pruned.species.rds), [`phy.throat.ngs.pruned.species.rds`](Data_Files/phy.throat.ngs.pruned.species.rds), [`ssgsea.rds`](Data_Files/ssgsea.rds), [`chaussabel_modules_17.rds`](Data_Files/chaussabel_modules_17.rds), and DIABLO infection model results; outputs: [`Figure3.png`](Output_Files/Figure3.png), [`FigureS5.png`](Output_Files/FigureS5.png).
+  - [`Figure_4_S6_100726.R`](Scripts/Figure_4_S6_100726.R): Figure 4 and Supplementary Figure S6; baseline and longitudinal immune module expression by symptom burden among infected participants; inputs: [`ssgsea.rds`](Data_Files/ssgsea.rds), [`chaussabel_modules_17.rds`](Data_Files/chaussabel_modules_17.rds); outputs: [`Figure4.png`](Output_Files/Figure4.png), [`FigureS6.png`](Output_Files/FigureS6.png).
+  - [`Figure_5_S8_100726.R`](Scripts/Figure_5_S8_100726.R): Figure 5 and Supplementary Figure S8; multi-omic associations between microbial species and host immune modules by symptom burden; inputs: [`phy.mts.16s.pruned.species.rds`](Data_Files/phy.mts.16s.pruned.species.rds), [`phy.throat.ngs.pruned.species.rds`](Data_Files/phy.throat.ngs.pruned.species.rds), [`ssgsea.rds`](Data_Files/ssgsea.rds), [`chaussabel_modules_17.rds`](Data_Files/chaussabel_modules_17.rds), and DIABLO symptom-burden model results; outputs: [`Figure5.png`](Output_Files/Figure5.png), [`FigureS8.png`](Output_Files/FigureS8.png).
+  - [`Figure_S1_100726.R`](Scripts/Figure_S1_100726.R): Supplementary Figure S1; longitudinal symptom burden and SARS-CoV-2 viral load kinetics; input: [`SARS2_challenge_sx_vl.csv`](Data_Files/SARS2_challenge_sx_vl.csv); output: [`FigureS1.png`](Output_Files/FigureS1.png).
+  - [`Figure_S3_100626.R`](Scripts/Figure_S3_100626.R): Supplementary Figure S3; longitudinal nasal and throat microbiome diversity and bacterial burden; inputs: [`phy.mts.16s.pruned.rds`](Data_Files/phy.mts.16s.pruned.rds), [`phy.throat.ngs.pruned.rds`](Data_Files/phy.throat.ngs.pruned.rds); output: [`FigureS3.png`](Output_Files/FigureS3.png).
+  - [`Figure_S7_100726.R`](Scripts/Figure_S7_100726.R): Supplementary Figure S7; baseline and longitudinal immune module expression by viral load among infected participants; inputs: [`ssgsea.rds`](Data_Files/ssgsea.rds), [`chaussabel_modules_17.rds`](Data_Files/chaussabel_modules_17.rds); output: [`FigureS7.png`](Output_Files/FigureS7.png).
+  - [`Figure_S8_S9_071126.R`](Scripts/Figure_S8_S9_071126.R): earlier version of the viral-load multi-omic analysis generating Supplementary Figures S8 and S9; inputs: species-level nasal and throat phyloseq objects, [`ssgsea.rds`](Data_Files/ssgsea.rds), [`chaussabel_modules_17.rds`](Data_Files/chaussabel_modules_17.rds), and DIABLO viral-load model results.
+  - [`Figure_S9_S10_100726.R`](Scripts/Figure_S9_S10_100726.R): Supplementary Figures S9 and S10; multi-omic associations between microbial species and host immune modules by viral load; inputs: [`phy.mts.16s.pruned.species.rds`](Data_Files/phy.mts.16s.pruned.species.rds), [`phy.throat.ngs.pruned.species.rds`](Data_Files/phy.throat.ngs.pruned.species.rds), [`ssgsea.rds`](Data_Files/ssgsea.rds), [`chaussabel_modules_17.rds`](Data_Files/chaussabel_modules_17.rds), and DIABLO viral-load model results; outputs: [`FigureS9.png`](Output_Files/FigureS9.png), [`FigureS10.png`](Output_Files/FigureS10.png).
 
-
-- [`Output_Files`](Output_Files/)/ 
-Figure1.png: Figure 1; nasal immune module expression by infection status.
-Figure2.png: Figure 2; nasal microbiome composition by infection status.
-Figure3.png: Figure 3; nasal multi-omic associations by infection status.
-Figure4.png: Figure 4; nasal immune module expression by symptom burden.
-Figure5.png: Figure 5; nasal multi-omic associations by symptom burden.
-FigureS1.png: Supplementary Figure S1; symptom burden and viral load kinetics.
-FigureS2.png: Supplementary Figure S2; throat immune module expression by infection status.
-FigureS3.png: Supplementary Figure S3; nasal and throat microbiome diversity and bacterial burden.
-FigureS4.png: Supplementary Figure S4; throat microbiome composition by infection status.
-FigureS5.png: Supplementary Figure S5; throat multi-omic associations by infection status.
-FigureS6.png: Supplementary Figure S6; throat immune module expression by symptom burden.
-FigureS7.png: Supplementary Figure S7; immune module expression by viral load.
-FigureS8.png: Supplementary Figure S8; throat multi-omic associations by symptom burden.
-
-FigureS9.png: Supplementary Figure S9; nasal multi-omic associations by viral load.
-
-FigureS10.png: Supplementary Figure S10; throat multi-omic associations by viral load.
+- [`Output_Files`](Output_Files/)/
+  - [`Figure1.png`](Output_Files/Figure1.png): Figure 1; nasal immune module expression by infection status.
+  - [`Figure2.png`](Output_Files/Figure2.png): Figure 2; nasal microbiome composition by infection status.
+  - [`Figure3.png`](Output_Files/Figure3.png): Figure 3; nasal multi-omic associations by infection status.
+  - [`Figure4.png`](Output_Files/Figure4.png): Figure 4; nasal immune module expression by symptom burden.
+  - [`Figure5.png`](Output_Files/Figure5.png): Figure 5; nasal multi-omic associations by symptom burden.
+  - [`FigureS1.png`](Output_Files/FigureS1.png): Supplementary Figure S1; symptom burden and viral load kinetics.
+  - [`FigureS2.png`](Output_Files/FigureS2.png): Supplementary Figure S2; throat immune module expression by infection status.
+  - [`FigureS3.png`](Output_Files/FigureS3.png): Supplementary Figure S3; nasal and throat microbiome diversity and bacterial burden.
+  - [`FigureS4.png`](Output_Files/FigureS4.png): Supplementary Figure S4; throat microbiome composition by infection status.
+  - [`FigureS5.png`](Output_Files/FigureS5.png): Supplementary Figure S5; throat multi-omic associations by infection status.
+  - [`FigureS6.png`](Output_Files/FigureS6.png): Supplementary Figure S6; throat immune module expression by symptom burden.
+  - [`FigureS7.png`](Output_Files/FigureS7.png): Supplementary Figure S7; immune module expression by viral load.
+  - [`FigureS8.png`](Output_Files/FigureS8.png): Supplementary Figure S8; throat multi-omic associations by symptom burden.
+  - [`FigureS9.png`](Output_Files/FigureS9.png): Supplementary Figure S9; nasal multi-omic associations by viral load.
+  - [`FigureS10.png`](Output_Files/FigureS10.png): Supplementary Figure S10; throat multi-omic associations by viral load.
