@@ -46,21 +46,21 @@ This repository contains the data files ([`Data_Files/`](Data_Files/)), scripts 
 
 - [`Output_Files`](Output_Files/)/
   - [`DIABLO`](Output_Files/DIABLO/)/
-    - [`infection`](Output_Files/DIABLO/infection/): fitted DIABLO models and model performance results for analyses of multi-omic associations by SARS-CoV-2 infection status; includes nasal (`mts`) and throat (`throat`) analyses.
-    - [`symptoms`](Output_Files/DIABLO/symptoms/): fitted DIABLO models and model performance results for analyses of multi-omic associations by symptom burden among infected participants; includes nasal (`mts`) and throat (`throat`) analyses.
-    - [`viral_load`](Output_Files/DIABLO/viral_load/): fitted DIABLO models and model performance results for analyses of multi-omic associations by SARS-CoV-2 viral load; includes nasal (`mts`) and throat (`throat`) analyses.
-  - [`Figure1.png`](Output_Files/Figure1.png): Figure 1; nasal immune module expression by infection status.
-  - [`Figure2.png`](Output_Files/Figure2.png): Figure 2; nasal microbiome composition by infection status.
-  - [`Figure3.png`](Output_Files/Figure3.png): Figure 3; nasal multi-omic associations by infection status.
-  - [`Figure4.png`](Output_Files/Figure4.png): Figure 4; nasal immune module expression by symptom burden.
-  - [`Figure5.png`](Output_Files/Figure5.png): Figure 5; nasal multi-omic associations by symptom burden.
-  - [`FigureS1.png`](Output_Files/FigureS1.png): Supplementary Figure S1; symptom burden and viral load kinetics.
-  - [`FigureS2.png`](Output_Files/FigureS2.png): Supplementary Figure S2; throat immune module expression by infection status.
-  - [`FigureS3.png`](Output_Files/FigureS3.png): Supplementary Figure S3; nasal and throat microbiome diversity and bacterial burden.
-  - [`FigureS4.png`](Output_Files/FigureS4.png): Supplementary Figure S4; throat microbiome composition by infection status.
-  - [`FigureS5.png`](Output_Files/FigureS5.png): Supplementary Figure S5; throat multi-omic associations by infection status.
-  - [`FigureS6.png`](Output_Files/FigureS6.png): Supplementary Figure S6; throat immune module expression by symptom burden.
-  - [`FigureS7.png`](Output_Files/FigureS7.png): Supplementary Figure S7; immune module expression by viral load.
-  - [`FigureS8.png`](Output_Files/FigureS8.png): Supplementary Figure S8; throat multi-omic associations by symptom burden.
-  - [`FigureS9.png`](Output_Files/FigureS9.png): Supplementary Figure S9; nasal multi-omic associations by viral load.
-  - [`FigureS10.png`](Output_Files/FigureS10.png): Supplementary Figure S10; throat multi-omic associations by viral load.
+    - [`infection`](Output_Files/DIABLO/infection/): fitted DIABLO models and model performance results for analyses of multi-omic associations by SARS-CoV-2 infection status; includes nasal (mts) and throat (throat) analyses
+    - [`symptoms`](Output_Files/DIABLO/symptoms/): fitted DIABLO models and model performance results for analyses of multi-omic associations by symptom burden among infected participants; includes nasal (mts) and throat (throat) analyses
+    - [`viral_load`](Output_Files/DIABLO/viral_load/): fitted DIABLO models and model performance results for analyses of multi-omic associations by SARS-CoV-2 viral load; includes nasal (mts) and throat (throat) analyses.
+  - [`Figure1.png`](Output_Files/Figure1.png): Figure 1; nasal immune module expression by infection status
+  - [`Figure2.png`](Output_Files/Figure2.png): Figure 2; nasal microbiome composition by infection status
+  - [`Figure3.png`](Output_Files/Figure3.png): Figure 3; nasal multi-omic associations by infection status
+  - [`Figure4.png`](Output_Files/Figure4.png): Figure 4; nasal immune module expression by symptom burden
+  - [`Figure5.png`](Output_Files/Figure5.png): Figure 5; nasal multi-omic associations by symptom burden
+  - [`FigureS1.png`](Output_Files/FigureS1.png): Supplementary Figure S1; symptom burden and viral load kinetics
+  - [`FigureS2.png`](Output_Files/FigureS2.png): Supplementary Figure S2; throat immune module expression by infection status
+  - [`FigureS3.png`](Output_Files/FigureS3.png): Supplementary Figure S3; nasal and throat microbiome diversity and bacterial burden
+  - [`FigureS4.png`](Output_Files/FigureS4.png): Supplementary Figure S4; throat microbiome composition by infection status
+  - [`FigureS5.png`](Output_Files/FigureS5.png): Supplementary Figure S5; throat multi-omic associations by infection status
+  - [`FigureS6.png`](Output_Files/FigureS6.png): Supplementary Figure S6; throat immune module expression by symptom burden
+  - [`FigureS7.png`](Output_Files/FigureS7.png): Supplementary Figure S7; immune module expression by viral load
+  - [`FigureS8.png`](Output_Files/FigureS8.png): Supplementary Figure S8; throat multi-omic associations by symptom burden
+  - [`FigureS9.png`](Output_Files/FigureS9.png): Supplementary Figure S9; nasal multi-omic associations by viral load
+  - [`FigureS10.png`](Output_Files/FigureS10.png): Supplementary Figure S10; throat multi-omic associations by viral load
