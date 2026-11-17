@@ -5,7 +5,7 @@
 **Corresponding authors:** Jillian H. Hurst ([email](mailto:jillian.hurst@duke.edu)) and Matthew S. Kelly ([email](mailto:mkelly3@uams.edu))  
 **Last updated:** November 16, 2026
 
-This repository contains the files and code necessary to replicate the analyses presented in the manuscript '_Upper respiratory microbiome and host immune signatures associated with SARS-CoV-2 susceptibility and illness in a human challenge model_', which is available on medRxiv (_______). The overall objective of this manuscript was to characterize upper respiratory tract microbe-host interactions that influence susceptibility to SARS-CoV-2 infection and associated symptomatology.
+This repository contains the files and code necessary to replicate the analyses presented in the manuscript '_Upper respiratory microbiome and host immune signatures associated with SARS-CoV-2 susceptibility and illness in a human challenge model_', which is available on medRxiv (MEDRXIV/2026/368138). The overall objective of this manuscript was to characterize upper respiratory tract microbe-host interactions that influence susceptibility to SARS-CoV-2 infection and associated symptomatology.
 
 ## Overview
 
